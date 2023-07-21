@@ -42,6 +42,7 @@ ol {
   flex-direction: row;
   gap: 30px;
   margin-block-start: 133px;
+  margin-inline-start: 30px;
 }
 
 .result {
@@ -56,6 +57,20 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
+  margin-block-start: 16px;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__fieldset-title {
+  color: #fff;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .button.search-form__submit-button {
@@ -66,8 +81,8 @@ ol {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-top: 26px;
-  padding: 0 73.5px;
+  margin-block-start: 26px;
+  padding: 6px 73.5px;
   background-color: transparent;
   border: 1px solid white;
 }
@@ -83,8 +98,6 @@ ol {
   text-transform: uppercase;
 }
 
-/* Список городов справа */
-
 .content__accent {
   color: #545050;
   font-family: Oswald;
@@ -95,13 +108,29 @@ ol {
   text-transform: uppercase;
 }
 
+/* Список городов справа */
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  justify-content: space-between;
+}
+
 .content__list {
-  margin-block-start: 26px;
   max-height: 298px;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.content__list::-webkit-scrollbar {
+  display: none;
+}
+
+.content__card-link {
+  text-decoration: none;
 }
 
 .content__video-card {
@@ -121,4 +150,27 @@ ol {
   font-weight: 700;
   line-height: 100%; /* 30px */
   text-transform: uppercase;
+}
+
+.content__video-card-description {
+  color: #fff;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.2px; /* 90% */
+}
+
+.button.more-button {
+  color: #fff;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 6px 73.5px;
+  background-color: transparent;
+  border: 1px solid white;
+  width: 100%;
 }
