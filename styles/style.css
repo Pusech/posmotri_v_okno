@@ -279,10 +279,6 @@ ol {
   box-shadow: none;
 }
 
-/* .content__video-card:focus-visible {
-  border: 1px solid white;
-} */
-
 .content__video-card-thumbnail {
   max-width: 194px;
 }
