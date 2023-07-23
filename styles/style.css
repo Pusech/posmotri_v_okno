@@ -40,16 +40,6 @@ ol {
   list-style: none;
 }
 
-/* *:focus {
-  outline: 0;
-  box-shadow: none;
-}
-
-*:focus:not(:focus-visible) {
-  outline: 0;
-  box-shadow: none;
-} */
-
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -64,11 +54,11 @@ ol {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  /* max-height: 560px; */
   margin-inline-start: 30px;
   margin-inline-end: 30px;
 }
 
+/* _____видео______ */
 .result {
   margin-block-start: 78px;
 }
@@ -79,25 +69,19 @@ ol {
   width: 711px;
   height: 386px;
   margin-block-end: 11px;
-  /* min-width: 711px;
-  max-width: 711px;
-  max-height: 386px;
-  min-height: 386px; */
 }
 
 .result__video {
-  /* min-height: 386px;
-  max-height: 386px;
-  max-width: 711px; */
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* _________форма поиска_______ */
+
 .search-form {
   display: flex;
   justify-content: space-between;
-  /* margin-block-start: 16px; */
   align-items: center;
 }
 
@@ -120,13 +104,59 @@ ol {
   box-shadow: none;
 }
 
+/* ___________Поиск по имени_________ */
+.search-form__textfield {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  min-width: 215px;
+  appearance: none;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:active {
+  border: 1px solid white;
+}
+
+.search-form__fieldset-title {
+  color: #fff;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* __________чекбоксы_________ */
+.search-form__checkbox-list {
+  display: flex;
+  gap: 14px;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid white;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 /* ______________ВРЕМЯ СУТОК__________ */
 .search-form__checkbox-list .search-form__label {
   cursor: pointer;
 }
 
 .search-form__checkbox-list .search-form__label span:hover {
-  /* text-decoration: underline; */
   border-bottom: 1px solid white;
 }
 
@@ -145,57 +175,7 @@ input[type="checkbox"]:checked + span {
   background-color: white;
 }
 
-/* ______________ВРЕМЯ СУТОК__________ */
-
-.search-form__textfield {
-  color: rgba(255, 255, 255, 0.7);
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  background-color: transparent;
-  border: none;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  min-width: 215px;
-  appearance: none;
-}
-
-/* ___________Поиск по имени_________ */
-
-.search-form__textfield:focus {
-  outline: none;
-}
-
-.search-form__textfield:active {
-  border: 1px solid white;
-}
-
-/* ___________Поиск по имени_________ */
-
-.search-form__fieldset-title {
-  color: #fff;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.search-form__checkbox-list {
-  display: flex;
-  gap: 14px;
-}
-
-.search-form__pseudo-checkbox {
-  width: 19px;
-  height: 19px;
-  border: 1px solid white;
-  background-color: transparent;
-  cursor: pointer;
-}
-
+/* _________Кнопка поиска______ */
 .button.search-form__submit-button {
   color: #fff;
   text-align: center;
@@ -211,7 +191,7 @@ input[type="checkbox"]:checked + span {
   cursor: pointer;
 }
 
-/* Название */
+/* Название Посмотри в окно */
 .title {
   color: #fff;
   font-family: Oswald;
@@ -239,8 +219,6 @@ input[type="checkbox"]:checked + span {
   flex-direction: column;
   gap: 26px;
   width: 100%;
-
-  /* justify-content: space-between; */
 }
 
 .content__list {
