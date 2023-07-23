@@ -64,7 +64,7 @@ ol {
   display: flex;
   flex-direction: row;
   gap: 30px;
-  /* margin-block-start: 133px; */
+
   margin-inline-start: 30px;
   margin-inline-end: 30px;
 }
