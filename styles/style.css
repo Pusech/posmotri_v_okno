@@ -197,16 +197,6 @@ ol {
   cursor: pointer;
 }
 
-/* .button:focus {
-  outline: none;
-  border: none;
-  box-shadow: none;
-}
-
-.button:focus-visible {
-  border: 1px solid white;
-} */
-
 /* Название */
 .title {
   color: #fff;
