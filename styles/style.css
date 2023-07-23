@@ -64,7 +64,7 @@ ol {
   display: flex;
   flex-direction: row;
   gap: 30px;
-
+  /* max-height: 560px; */
   margin-inline-start: 30px;
   margin-inline-end: 30px;
 }
@@ -75,20 +75,30 @@ ol {
 
 .result__video-container {
   position: relative;
-  min-width: 711px;
+  display: block;
+  width: 711px;
+  height: 386px;
+  margin-block-end: 11px;
+  /* min-width: 711px;
   max-width: 711px;
+  max-height: 386px;
+  min-height: 386px; */
 }
 
 .result__video {
+  /* min-height: 386px;
+  max-height: 386px;
+  max-width: 711px; */
   width: 100%;
   height: 100%;
-  /* здесь подумать */
+  /* position: absolute; */
+  object-fit: cover;
 }
 
 .search-form {
   display: flex;
   justify-content: space-between;
-  margin-block-start: 16px;
+  /* margin-block-start: 16px; */
   align-items: center;
 }
 
@@ -116,8 +126,9 @@ ol {
   cursor: pointer;
 }
 
-.search-form__checkbox-list .search-form__label:hover {
-  text-decoration: underline;
+.search-form__checkbox-list .search-form__label span:hover {
+  /* text-decoration: underline; */
+  border-bottom: 1px solid white;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -126,6 +137,11 @@ ol {
 }
 
 .search-form__checkbox-list .search-form__pseudo-checkbox:active {
+  border: 3px double #1b1919;
+  background-color: white;
+}
+
+input[type="checkbox"]:checked + span {
   border: 3px double #1b1919;
   background-color: white;
 }
@@ -181,10 +197,6 @@ ol {
   cursor: pointer;
 }
 
-/* .search-form__pseudo-checkbox:checked {
-  background-color: white;
-} */
-
 .button.search-form__submit-button {
   color: #fff;
   text-align: center;
@@ -227,25 +239,23 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 26px;
-  justify-content: space-between;
   width: 100%;
+
+  /* justify-content: space-between; */
 }
 
 .content__list {
-  max-height: 298px;
+  position: relative;
+  max-height: 300px;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  position: relative;
 }
 
 .content__list::-webkit-scrollbar {
   display: none;
 }
-
-/* .content__list-item {
-} */
 
 .content__card-link {
   display: block;
@@ -277,7 +287,6 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
-  margin: 3px;
   outline: 0;
   box-shadow: none;
 }
@@ -298,7 +307,7 @@ ol {
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%; /* 30px */
+  line-height: 100%;
   text-transform: uppercase;
 }
 
@@ -308,7 +317,7 @@ ol {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16.2px; /* 90% */
+  line-height: 16.2px;
 }
 
 .button.more-button {
