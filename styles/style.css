@@ -18,7 +18,6 @@ html {
   background-color: #1b1919;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 h1,
@@ -107,8 +106,8 @@ ol {
 /* ___________Поиск по имени_________ */
 .search-form__textfield {
   color: rgba(255, 255, 255, 0.7);
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
+  font-family: inherit;
+  font-size: inherit;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -116,14 +115,14 @@ ol {
   border: none;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
-  min-width: 215px;
+  min-width: 225px;
   appearance: none;
 }
 
 .search-form__fieldset-title {
   color: #fff;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
+  font-family: inherit;
+  font-size: inherit;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -135,7 +134,13 @@ ol {
 }
 
 .search-form__textfield:active {
-  border: 1px solid white;
+  border: none;
+  outline: 1px solid white;
+}
+
+.search-form__label:has(:focus-visible) .search-form__textfield:not(:active) {
+  outline: 1px solid white;
+  outline-offset: 1px;
 }
 
 /* __________чекбоксы_________ */
@@ -159,11 +164,12 @@ ol {
 
 .search-form__label:hover .search-form__label-text {
   border-bottom: 1px solid white;
+  margin-bottom: -1px;
 }
 
-.search-form__label:has(:focus-visible) {
-  padding: 1px;
-  border: 1px solid white;
+.search-form__checkbox-list .search-form__label:has(:focus-visible) {
+  outline: 1px solid white;
+  outline-offset: 1px;
 }
 
 .search-form__checkbox-list .search-form__pseudo-checkbox:active {
@@ -180,8 +186,8 @@ input[type="checkbox"]:checked + span {
 .button.search-form__submit-button {
   color: #fff;
   text-align: center;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
+  font-family: inherit;
+  font-size: inherit;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -189,6 +195,7 @@ input[type="checkbox"]:checked + span {
   padding: 6px 73.5px;
   background-color: transparent;
   border: 1px solid white;
+
   cursor: pointer;
 }
 
@@ -235,6 +242,16 @@ input[type="checkbox"]:checked + span {
   display: none;
 }
 
+/* ____Карточки___ */
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  outline: 0;
+  box-shadow: none;
+  height: 107px;
+}
+
 .content__card-link {
   display: block;
   text-decoration: none;
@@ -244,14 +261,12 @@ input[type="checkbox"]:checked + span {
   background-color: #545050;
 }
 
-.content__card-link:hover h2 {
+.content__card-link:hover .content__video-card-title {
   text-decoration: underline white;
-  /* border-bottom: 2px solid white; */
 }
 
-.content__card-link:hover p {
+.content__card-link:hover .content__video-card-description {
   text-decoration: underline white;
-  /* border-bottom: 2px solid white; */
 }
 
 .content__card-link:focus {
@@ -261,28 +276,29 @@ input[type="checkbox"]:checked + span {
 }
 
 .content__card-link:focus-visible {
-  border: 1px solid white;
+  outline: 1px solid white;
+  outline-offset: -1px;
 }
 
 .content__card-link_current {
   background-color: #545050;
 }
 
-.content__video-card {
-  display: flex;
-  justify-content: space-between;
-  outline: 0;
-  box-shadow: none;
-}
+/*_____ контент в карточках _____ */
 
 .content__video-card-thumbnail {
-  max-width: 194px;
+  /* max-width: 194px; */
+
+  width: 194px;
+  height: 103px;
+  align-self: center;
 }
 
 .content__video-card-description-container {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  padding: 4px 0 0 2px;
 }
 
 .content__video-card-title {
@@ -297,8 +313,8 @@ input[type="checkbox"]:checked + span {
 
 .content__video-card-description {
   color: #fff;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
+  font-family: inherit;
+  font-size: inherit;
   font-style: normal;
   font-weight: 400;
   line-height: 16.2px;
@@ -307,17 +323,21 @@ input[type="checkbox"]:checked + span {
 .button.more-button {
   color: #fff;
   text-align: center;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
+  font-family: inherit;
+  font-size: inherit;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   padding: 6px 73.5px;
   background-color: transparent;
   border: 1px solid white;
+
   width: 100%;
+
   cursor: pointer;
 }
+
+/* _____Кнопощки____ */
 
 .button:hover {
   text-decoration: underline white;
@@ -330,6 +350,12 @@ input[type="checkbox"]:checked + span {
 .button:focus {
   outline: none;
 }
-.button:focus-visible {
-  border: 3px double white;
+.button.search-form__submit-button:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 1px;
+}
+
+.more-button:focus-visible {
+  outline: 1px solid white;
+  outline-offset: -3px;
 }
