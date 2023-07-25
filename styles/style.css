@@ -119,6 +119,15 @@ ol {
   appearance: none;
 }
 
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .search-form__fieldset-title {
   color: #fff;
   font-family: inherit;
@@ -202,7 +211,7 @@ input[type="checkbox"]:checked + span {
 /* Название Посмотри в окно */
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, Impact, "Arial Narrow Bold", sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -212,7 +221,7 @@ input[type="checkbox"]:checked + span {
 
 .content__accent {
   color: #545050;
-  font-family: Oswald;
+  font-family: Oswald, Impact, "Arial Narrow Bold", sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -287,8 +296,6 @@ input[type="checkbox"]:checked + span {
 /*_____ контент в карточках _____ */
 
 .content__video-card-thumbnail {
-  /* max-width: 194px; */
-
   width: 194px;
   height: 103px;
   align-self: center;
@@ -303,7 +310,7 @@ input[type="checkbox"]:checked + span {
 
 .content__video-card-title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, Impact, "Arial Narrow Bold", sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
